@@ -67,7 +67,21 @@ function runProfile() {
     }
 
  
+    getRestaurant();
+
+   function getRestaurant() {
+
+    newRestaurantApi = "https://developers.zomato.com/api/v2.1/user-key=0efd02cbde4975bba9214b11dad61d98&search?entity_id=94741";
+
+    $.getJSON(newRestaurantApi, function(data) {
+        console.log(data);
    
+        
+    });
+
+    
+    
+   }
 
     
 });
