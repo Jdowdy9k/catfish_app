@@ -1,57 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CatFish</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link rel="stylesheet" href="assets/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='/box-shadows.css'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Catfish</title>
 
 </head>
 
-<style>
-    html {
-        background: url(assets/disco-background.png) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-</style>
-
 <body>
-    <nav>
-        <div class="nav-wrapper green" id="navbar">
-          <a href="#" id="logo" class="brand-logo center">CatFish</a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-          </ul>
-        </div>
-      </nav>
 
-      <div class="container">
-        <div class="row center">
-            <div class="col s12 m6">
-              <div class="card large">
-                <div class="card-image">
-                  <img src="https://picsum.photos/200/300">
-                  <span class="card-title">Card Title</span>
+    <div class="row">
+        <div class="my-nav-bar center-align">
+            <h2 id="header-text">Catfish</h2>
+        </div>
+    </div>
+
+    <br><br>
+
+
+    <div class="container center-align">
+
+        <div class="row center-align">
+
+            <div class="col xl2 l2 m0 s0"></div>
+
+            <div class="col xl8 l8 m12 s12 center-align" id="generate-profile-div">
+                <div>
+                    <h5 id="search-header">Generate Profile</h5>
+                    <button id="start-button">Start</button>
                 </div>
-                <div class="card-content">
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                    
-                </div>
-              </div>
             </div>
-          </div>
-      </div>
+        </div>
+
+        <div class="col xl2 l2 m0 s0"></div>
+
+
+
+        <div class='bShadow-34'>
+            <div class="col xl8 l8 m12 s12 center-align" id="profile-info-div">
+
+
+                <div>
+
+                    <div class="left-align">
+
+                        <ul id="profile-ul">
+                            <li id="picture-li"></li>
+                            <h3 id="name-li"></h3>
+                            <li id="age-li"></li>
+                            <li id="gender-li"></li>
+                            <li id="location-li"></li>
+                            <li id="email-li"></li>
+                            <li id="username-li"></li>
+                            <li id="quote-li"></li>
+
+                            <li id="crazy-pic-li"></li>
+                        </ul>
+
+                        <button id="go-back">Go Back</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+ 
+            
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
