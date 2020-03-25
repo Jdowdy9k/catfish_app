@@ -22,4 +22,34 @@ button {
         -webkit-animation: fadeInRight 1s ease-in;
         -moz-animation: fadeInRight 1s ease-in;
         -o-animation: fadeInRight 1s ease-in;
-        animation: fadeInRight 1s ease-in; }
+        animation: fadeInRight 1s ease-in;
+    }
+
+    
+.brand-logo {
+    animation: color-change 2.5s infinite, 3s slide-right;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 60px !important;
+    overflow: hidden;
+    }
+
+@keyframes color-change {
+    0% { color: red; }
+    20% { color: yellow }
+    40% { color: purple}
+    60% { color: blue; }
+    80% { color: lightgreen}
+    100% { color: pink; }
+}
+
+@keyframes slide-right {
+    from {
+      margin-left: -100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
