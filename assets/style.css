@@ -1,0 +1,14 @@
+.brand-logo {
+    animation: color-change 2.5s infinite;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 60px !important;
+    }
+
+@keyframes color-change {
+    0% { color: red; }
+    20% { color: yellow }
+    40% { color: purple}
+    60% { color: blue; }
+    80% { color: lightgreen}
+    100% { color: pink; }
+}
