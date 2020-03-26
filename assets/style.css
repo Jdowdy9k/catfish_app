@@ -15,9 +15,11 @@ button {
     box-shadow: 1px 1px lime, 2px 2px lime, 3px 3px lime;
     transform: translateX(-3px);
     }
-#picture-li {
-    
+
+#pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div {
+    width: 100%;
 }
+
 .bShadow-34,.bShadow-34h:hover{
     box-shadow:rgba(0, 0, 0, 0.2) -15px 15px 5px -5px;
     border-radius: 35px;
