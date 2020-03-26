@@ -14,6 +14,10 @@ button {
     transform: translateX(-3px);
     }
 
+#pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div {
+    width: 100%;
+}
+
 .bShadow-34,.bShadow-34h:hover{
     box-shadow:rgba(0, 0, 0, 0.2) -15px 15px 5px -5px;}
    
