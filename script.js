@@ -13,9 +13,8 @@ $(document).ready(function() {
     $("#info-selector-div").hide();
     $("#quote-selector-div").hide();
     $("#profile-info-div").hide();
-    $("#dog-selector-div").hide();
     $("#cat-selector-div").hide();
-    $("#pet-div").hide();
+  
 
 $("#start-button").on("click", function(){
     $("#gender-div").show();
@@ -23,9 +22,7 @@ $("#start-button").on("click", function(){
     $("#info-selector-div").hide();
     $("#quote-selector-div").hide();
     $("#profile-info-div").hide();
-    $("#dog-selector-div").hide();
     $("#cat-selector-div").hide();
-    $("#pet-div").hide();
     $("#generate-profile-div").hide();
 
 })
@@ -36,9 +33,7 @@ $("#gender-save").on("click", function(){
     $("#info-selector-div").hide();
     $("#quote-selector-div").hide();
     $("#profile-info-div").hide();
-    $("#dog-selector-div").hide();
     $("#cat-selector-div").hide();
-    $("#pet-div").hide();
     $("#generate-profile-div").hide();
     whichGender();
     getPic(catfishGender);
@@ -51,9 +46,7 @@ $("#pic-save").on("click", function(){
     $("#info-selector-div").show();
     $("#quote-selector-div").hide();
     $("#profile-info-div").hide();
-    $("#dog-selector-div").hide();
     $("#cat-selector-div").hide();
-    $("#pet-div").hide();
     $("#generate-profile-div").hide();
     getInfo(catfishGender);
  
@@ -65,9 +58,7 @@ $("#info-save").on("click", function(){
     $("#info-selector-div").hide();
     $("#quote-selector-div").show();
     $("#profile-info-div").hide();
-    $("#dog-selector-div").hide();
     $("#cat-selector-div").hide();
-    $("#pet-div").hide();
     $("#generate-profile-div").hide();
     generateQuote();
  
@@ -79,27 +70,15 @@ $("#quote-save").on("click", function(){
     $("#info-selector-div").hide();
     $("#quote-selector-div").hide();
     $("#profile-info-div").hide();
-    $("#dog-selector-div").hide();
-    $("#cat-selector-div").hide();
-    $("#pet-div").show();
+    $("#cat-selector-div").show();
     $("#generate-profile-div").hide();
+    getPet();
  
 })
 
-$("#pet-save").on("click", function() {
-    $("#gender-div").hide();
-    $("#pic-selector-div").hide();
-    $("#info-selector-div").hide();
-    $("#quote-selector-div").hide();
-    $("#profile-info-div").hide();
-    $("#dog-selector-div").show();
-    $("#cat-selector-div").hide();
-    $("#pet-div").hide();
-    $("#generate-profile-div").hide();
-    whichPet();
-})
 
-$("#dog-save").on("click", function() {
+
+$("#cat-save").on("click", function() {
     $("#gender-div").hide();
     $("#pic-selector-div").hide();
     $("#info-selector-div").hide();
@@ -136,6 +115,10 @@ $("#quote-reload").on("click", function() {
     generateQuote();
 })
 
+$("#cat-reload").on("click", function() {
+    getPet();
+})
+
 
 function whichGender() {
     if (maleCheck.checked == true)  {
@@ -167,6 +150,16 @@ function getPic(x) {
     });
 }
 
+function getPet() {
+    petApi = "https://aws.random.cat/meow";
+    $.getJSON(petApi, function(data){
+        console.log(data);
+        var petUrl = data.file;
+        console.log(petUrl);
+        var petImage = $("<img>").attr("src", petUrl);
+        $("#cat-pic-div").html(petImage);
+    });
+ }; 
 
 function getInfo(x) {
     $.ajax({
