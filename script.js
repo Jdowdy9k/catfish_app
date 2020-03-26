@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 $(document).ready(function() {
 
 $("#profile-info-div").hide();
@@ -19,6 +26,7 @@ function runProfile() {
         url: 'https://randomuser.me/api/',
         dataType: 'json',
         success: function(data) {
+            
             var gender = data.results[0].gender;
             var nameFirst = data.results[0].name.first;
             var nameLast = data.results[0].name.last;
@@ -37,15 +45,17 @@ function runProfile() {
         
           console.log(data);
           $("#picture-li").html(img);
-          $("#gender-li").text(gender);
+          $("#gender-li").text("Gender: " + gender);
           
-          $("#name-li").text(nameFirst + ", " + nameLast);
-          $("#location-li").text(locationCity + ", " + locationState + ", " + locationCountry);
-          $("#email-li").text(email);
-          $("#username-li").text(userName);
-          $("#age-li").text(age);
+          $("#name-li").text("Name: " + nameFirst + ", " + nameLast);
+          $("#location-li").text("Location: " + locationCity + ", " + locationState + ", " + locationCountry);
+          $("#email-li").text("Email: " + email);
+          $("#username-li").text("Username: " + userName);
+          $("#age-li").text("Age: " + age);
           
           generateQuote();
+          getPet();
+          
        
           
         }
@@ -65,9 +75,17 @@ function runProfile() {
             
         });
     }
+     
+    })
 
- 
-   
-
-    
-});
+    function getPet() {
+        petApi = "https://aws.random.cat/meow";
+        $.getJSON(petApi, function(data){
+            console.log(data);
+            var petUrl = data.file;
+            console.log(petUrl);
+            var petImage = $("<img>").attr("src", petUrl);
+            $("#cat-pic-li").append(petImage);
+        });
+     };
+getDog();
