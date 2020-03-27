@@ -1,100 +1,187 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-  
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
-      <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet"> 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-      <link rel="stylesheet" href="assets/style.css">
-    
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<html>
 
-      <title>Catfish</title>
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel='stylesheet' href='/box-shadows.css'>
+    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/vaibhav111tandon/vov.css@latest/vov.css" rel="stylesheet" type="text/css">
 
-    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <body>
- 
-            <div class="row">
-                <div class="my-nav-bar center-align">
-                <h2 id="header-text">Catfish</h2>
-                <div id="dog-pic"></div>
+    <title>Catfish</title>
+
+</head>
+
+
+<style>
+    html {
+        background: url(assets/blue-gradient-background.png) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper deep-orange lighten-1" id="navbar">
+            <a href="#" id="logo" class="brand-logo center">CatFish</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container center-align">
+
+
+        <div class='bShadow-34' id="generate-profile-div">
+
+
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+                <div>
+                    <h5 id="search-header">Generate Profile</h5>
+                    <button id="start-button">Start</button>
                 </div>
             </div>
 
-            <br><br>
-            
 
-        
-        <div class="container center-align">
-            
-            <div class="row center-align">
 
-                <div class="col xl2 l2 m0 s0"></div>
-                
-                <div class="col xl8 l8 m12 s12 center-align" id="generate-profile-div">
-                    <div>
-                        <h5 id="search-header">Generate Profile</h5>
-                            <button id="start-button">Start</button>
-                        </div>
-                        <p>Add a cat or dog to your dating profile</p>
+        </div>
 
-                        <div>
-                        <input type="checkbox" id="scales" name="scales">
-                            <label for="scales">Cat</label>
-</div>
+        <div class='bShadow-34' id="gender-div">
 
-<div>
-  <input type="checkbox" id="horns" name="horns">
-  <label for="horns">Dog</label>
-</div>
-                    <div>
-                        
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+                <div>
+                    <h5 id="gender-header">Is this Catfish Male or Female?</h5>
+                    <form class="left-align" action="#">
+                        <p>
+                            <label>
+                                <input type="checkbox" id="male-check" />
+                                <span style="color: black; margin-left: 5px;">Male</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" id="female-check" />
+                                <span style="color: black; margin-left: 5px;">Female</span>
+                            </label>
+                        </p>
+                        <p class="right-align">
+                            <button id="gender-save">Save</button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
 
+
+        <div class='bShadow-34' id="pic-selector-div">
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+                <div>
+                    <h5 id="pet-header">Is this your Catfish's Face?</h5>
+
+                    <div id="pic-result"></div>
+                    <div style="margin: 5px;">
+                        <button id="pic-reload">Nah, try again</button>
+                        <button id="pic-save">Save</button>
                     </div>
                 </div>
-
-                <div class="col xl2 l2 m0 s0"></div>
-                
-
-                <div class="col xl8 l8 m12 s12 center-align" id="profile-info-div"> 
-                 
-          
-                                <div>
-
-                                    <div class="left-align">
-                                
-                                    <ul id="profile-ul">
-                                        <li id="picture-li"></li>
-                                        <h3 id="name-li"></h3>
-                                        <li id="age-li"></li>
-                                        <li id="gender-li"></li>
-                                        <li id="location-li"></li>
-                                        <li id="email-li"></li>
-                                        <li id="username-li"></li>
-                                        <li id="quote-li"></li>
-
-                                        <li id="crazy-pic-li"></li>
-                                        <li id="cat-pic-li"></li>
-                                    </ul>
-
-                                   <button id="go-back">Go Back!</button>
-
-                                    </div>
-                 
-                                </div>
-            
-                        
-                           
-                </div>
-            </div>     
+            </div>
         </div>
-    </div> 
 
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-        <script src="script.js"></script>
-    
-    </body>
-  
+        <div class='bShadow-34' id="info-selector-div">
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+
+                <h5 id="info-header">Every good fish has a story. Set up your basic info!</h5>
+                <div>
+                    <ul id="profile-ul">
+                        <li id="picture-li"></li>
+                        <h3 id="name-li"></h3>
+                        <li id="age-li"></li>
+                        <li id="gender-li"></li>
+                        <li id="location-li"></li>
+                        <li id="email-li"></li>
+                        <li id="username-li"></li>
+                        <li id="quote-li"></li>
+
+                        <li id="crazy-pic-li"></li>
+                    </ul>
+                    <button id="info-reload">Nah, try again</button>
+                    <button id="info-save">Save</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class='bShadow-34' id="quote-selector-div">
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+                <div>
+                    <h5 id="quote-header">You are an educated Catfish. Now pick a favorite quote:</h5>
+                    <div id="quote-div">
+
+                    </div>
+                    <div style="margin: 10px;">
+                        <button id="quote-reload">Nah, try again</button>
+                        <button id="quote-save">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='bShadow-34' id="cat-selector-div">
+
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+
+                <h5 id="cat-header">Is this your kitty?</h5>
+                <div id="cat-pic-div"></div>
+                <div style="margin: 10px;">
+                    <button id="cat-reload">Nah, try again</button>
+                    <button id="cat-save">Save</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class='bShadow-34' id="final-div">
+
+            <div class="col xl8 l8 m12 s12 center-align" style="padding: 10px; margin-top: 10px;">
+                
+                    <h5 id="cat-header">This Catfish is Served</h5>
+                    <ul id="profile-ul">
+                        <li id="final-picture"></li>
+                        <h3 id="final-name"></h3>
+                        <li id="final-age"></li>
+                        <li id="final-gender"></li>
+                        <li id="final-location"></li>
+                        <li id="final-email"></li>
+                        <li id="final-username"></li>
+                        <li id="final-quote"></li>
+                        <li id="final-cat"></li>
+                    </ul>
+                    
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
 </html>
