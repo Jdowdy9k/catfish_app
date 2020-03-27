@@ -1,8 +1,8 @@
 button {
     font-weight: bolder;
-    color: rgba(248, 122, 248, 0.89);
+    color: rgb(255	202	40);
     background-color: rgb(19, 80, 246);
-    border: 1px solid rgba(248, 9, 248, 0.89);
+    border: 1px solid rgb(255	202	40);
     border-radius: 10px;
     padding: 15px;
     cursor: pointer;
@@ -12,7 +12,7 @@ button {
     transition: all 0.2s ease-in-out;
     }
     button:hover {
-    box-shadow: 1px 1px  rgba(248, 9, 248, 0.89), 2px 2px  rgba(248, 9, 248, 0.89), 3px 3px  rgba(248, 9, 248, 0.89);
+    box-shadow: 1px 1px  rgb(255	202	40), 2px 2px rgb(255	202	40), 3px 3px  rgb(255	202	40);
     transform: translateX(-3px);
     }
 
@@ -34,9 +34,9 @@ a:hover {
     opacity: 60%;
 }
 
-#pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div, #generate-profile-div, #gender-div, #book-selector-div, #book-selected-div {
+#pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div, #generate-profile-div, #gender-div, #book-selector-div, #book-selected-div, #quote-selector-div {
     width: 100%;
-    margin: 35px;
+    margin-top: 80px;
     border-radius: 35px;
     background: lightsteelblue;
     padding: 20px;
