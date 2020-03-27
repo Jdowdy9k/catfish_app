@@ -7,7 +7,8 @@ $(document).ready(function() {
     var noPetCheck = document.querySelector("#no-pet-check");
     var catfishGender;
     
-
+    
+    $("#final-div").hide();
     $("#gender-div").hide();
     $("#pic-selector-div").hide();
     $("#info-selector-div").hide();
@@ -88,6 +89,7 @@ $("#cat-save").on("click", function() {
     $("#cat-selector-div").hide();
     $("#pet-div").hide();
     $("#generate-profile-div").hide();
+    runProfile();
 })
 
 $("#go-back").on("click", function() {
@@ -119,6 +121,10 @@ $("#cat-reload").on("click", function() {
     getPet();
 })
 
+$("#cat-save").on("click", function() {
+    $("#final-div").show();
+})
+
 
 function whichGender() {
     if (maleCheck.checked == true)  {
@@ -143,7 +149,6 @@ function getPic(x) {
               width: 200
             });
             $("#pic-result").html(img);
-    
           
         }
     
@@ -157,7 +162,11 @@ function getPet() {
         var petUrl = data.file;
         console.log(petUrl);
         var petImage = $("<img>").attr("src", petUrl);
-        $("#cat-pic-div").html(petImage);
+        
+        $("#cat-pic-div").html($(petImage).attr("class", "cat-pic"));
+        
+
+        
     });
  }; 
 
@@ -192,55 +201,50 @@ function getInfo(x) {
 
 }
 
-function whichPet() {
-    if (dogCheck.checked == true)  {
-        console.log("dog")
-      };
-  
-    if (catCheck.checked == true)  {
-          console.log("cat");
-        };
-
-    if (noPetCheck.checked == true)  {
-            console.log("no pet");
-        };
-}
 
 function runProfile() {
-    $.ajax({
-        url: 'https://randomuser.me/api/',
-        dataType: 'json',
-        success: function(data) {
-            var gender = data.results[0].gender;
-            var nameFirst = data.results[0].name.first;
-            var nameLast = data.results[0].name.last;
-            var locationCity = data.results[0].location.city;
-            var locationState = data.results[0].location.state;
-            var locationCountry = data.results[0].location.country;
-            var email = data.results[0].email;
-            var userName = data.results[0].login.username;
-            var age = data.results[0].dob.age;
-            var picture = data.results[0].picture.large;
-            var img = $('<img />',
-             { id: 'Myid',
-               src: picture, 
-               width: 200
-             });
+
+        finalPic = $("#pic-result").html();
+        $("#final-picture").html(finalPic);
         
-          console.log(data);
-          $("#picture-li").html(img);
-          $("#gender-li").text(gender);    
-          $("#name-li").text(nameFirst + ", " + nameLast);
-          $("#location-li").text(locationCity + ", " + locationState + ", " + locationCountry);
-          $("#email-li").text(email);
-          $("#username-li").text(userName);
-          $("#age-li").text(age);
-          
-          generateQuote();
-       
-          
-        }
-      });
+        finalName = $("#name-li").text();
+        $("#final-name").text(finalName);
+
+        finalAge = $("#age-li").text();
+        $("#final-age").text(finalAge);
+
+        finalGender = $("#gender-li").text();
+        $("#final-gender").html(finalGender);
+
+        finalEmail = $("#email-li").text();
+        $("#final-email").text(finalEmail);
+
+        finalUserName = $("#username-li").text();
+        $("#final-username").text(finalUserName);
+
+        finalQuote = $("#quote-div").text();
+        $("#final-quote").text(finalQuote);
+
+        finalCat = $("#cat-pic-div").html();
+        $("#final-cat").html(finalCat);
+
+
+        
+
+
+
+
+
+
+
+        // <h3 id="name"></h3>
+        // <li id="age"></li>
+        // <li id="gender"></li>
+        // <li id="location"></li>
+        // <li id="email"></li>
+        // <li id="username"></li>
+        // <li id="quote"></li>
+   
 
     }
 
