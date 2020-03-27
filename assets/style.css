@@ -18,17 +18,23 @@ button {
 
 .cat-pic {
     width: 200px;
+    margin: 15px;
+    
 }
 
-<<<<<<< HEAD
-.final-pic {
-    border-radius: 100%;
+.book-pic-select {
+    width: 180px;
+    margin: 15px;
+
 }
 
-#pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div {
-=======
-#pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div, #generate-profile-div, #gender-div {
->>>>>>> 176ff6afcc6da662cbcfef58254447499bc40f30
+
+
+a:hover {
+    opacity: 60%;
+}
+
+#pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div, #generate-profile-div, #gender-div, #book-selector-div, #book-selected-div {
     width: 100%;
     margin: 35px;
     border-radius: 35px;
