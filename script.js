@@ -304,7 +304,7 @@ $(document).ready(function () {
 
   
     function findBook(x) {
-        newBookApi = "http://openlibrary.org/search.json?q=" + x;
+        newBookApi = "https://openlibrary.org/search.json?q=" + x;
 
         $.getJSON(newBookApi, function (data) {
             console.log(data);
