@@ -1,35 +1,43 @@
 button {
-    color: #1D9AF2;
+    color: lime;
     background-color: #292D3E;
-    border: 1px solid #1D9AF2;
+    border: 1px solid lime;
     border-radius: 4px;
     padding: 0 15px;
     cursor: pointer;
-    height:32px;
-    font-size:14px;
+    height:50px;
+    width: 150px;
+    margin: 15px;
+    font-size: 25px;
     transition: all 0.2s ease-in-out;
     }
     button:hover {
-    box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
+    box-shadow: 1px 1px lime, 2px 2px lime, 3px 3px lime;
     transform: translateX(-3px);
     }
+
+.cat-pic {
+    width: 200px;
+}
 
 #pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div {
     width: 100%;
 }
 
 .bShadow-34,.bShadow-34h:hover{
-    box-shadow:rgba(0, 0, 0, 0.2) -15px 15px 5px -5px;}
+    box-shadow:rgba(0, 0, 0, 0.2) -15px 15px 5px -5px;
+    border-radius: 35px;
+ 
+}
    
-      
-.u--fadeInRight {
-        -webkit-animation: fadeInRight 1s ease-in;
-        -moz-animation: fadeInRight 1s ease-in;
-        -o-animation: fadeInRight 1s ease-in;
-        animation: fadeInRight 1s ease-in;
-    }
+#profile-ul {
+    margin: auto;
+    border-radius: 35px;
+    background: lightsteelblue;
+    padding: 20px;
+}    
 
-    
+
 .brand-logo {
     animation: color-change 2.5s infinite, 3s slide-right;
     font-family: 'Bubblegum Sans', cursive;
@@ -57,3 +65,19 @@ button {
       width: 100%;
     }
   }
+
+
+@keyframes fade-in-bottom-right{
+    from{
+        opacity: 0;
+        transform: translate3d(100%, 100%, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fade-in-bottom-right{
+    animation-name: fade-in-bottom-right;
+}
