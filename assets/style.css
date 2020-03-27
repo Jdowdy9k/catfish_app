@@ -28,19 +28,27 @@ button {
 
 }
 
+#gender-form {
+    width: 70%;
+}
+
+#final-div {
+    margin-bottom: 80px;
+}
 
 
 a:hover {
     opacity: 60%;
 }
 
-#pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div, #generate-profile-div, #gender-div, #book-selector-div, #book-selected-div {
+#pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div, #generate-profile-div, #gender-div, #book-selector-div, #book-selected-div, #quote-selector-div {
     width: 100%;
     margin: 35px;
     border-radius: 35px;
     background: lightsteelblue;
     padding: 20px;
     font-family: 'Fredoka One', cursive;
+    margin-bottom: 80px;
 }
 
 .bShadow-34,.bShadow-34h:hover{
