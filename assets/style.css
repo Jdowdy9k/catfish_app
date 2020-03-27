@@ -16,6 +16,10 @@ button {
     transform: translateX(-3px);
     }
 
+.cat-pic {
+    width: 200px;
+}
+
 #pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div {
     width: 100%;
 }
