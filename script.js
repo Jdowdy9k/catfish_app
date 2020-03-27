@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+// Modal Creation
     var elems = $('.modal');
     var instances = M.Modal.init(elems);
 
@@ -7,12 +7,12 @@ $(document).ready(function () {
         instances.open();
     })
     
-
+// Variables set for gender
     var maleCheck = document.querySelector("#male-check");
     var femaleCheck = document.querySelector("#female-check");
     var catfishGender;
 
-
+// Hides and shows appropriate divs
     $("#final-div").hide();
     $("#gender-div").hide();
     $("#pic-selector-div").hide();
@@ -24,7 +24,7 @@ $(document).ready(function () {
     $("#book-selected-div").hide();
    
 
-
+// Hides and shows appropriate divs
     $("#start-button").on("click", function () {
         $("#gender-div").show();
         $("#pic-selector-div").hide();
@@ -35,7 +35,7 @@ $(document).ready(function () {
         $("#generate-profile-div").hide();
 
     })
-
+// Calls the whichGender and getPic function
     $("#gender-save").on("click", function () {
         $("#gender-div").hide();
         $("#pic-selector-div").show();
@@ -48,7 +48,7 @@ $(document).ready(function () {
         getPic(catfishGender);
 
     })
-
+// Calls the getInfo based of catfish gender
     $("#pic-save").on("click", function () {
         $("#gender-div").hide();
         $("#pic-selector-div").hide();
@@ -60,7 +60,7 @@ $(document).ready(function () {
         getInfo(catfishGender);
 
     })
-
+// Calls the generateQuote function
     $("#info-save").on("click", function () {
         $("#gender-div").hide();
         $("#pic-selector-div").hide();
@@ -72,7 +72,7 @@ $(document).ready(function () {
         generateQuote();
 
     })
-
+// Calls the getPet function
     $("#quote-save").on("click", function () {
         $("#gender-div").hide();
         $("#pic-selector-div").hide();
@@ -92,7 +92,7 @@ $(document).ready(function () {
         $("#cat-selector-div").hide();
         $("#final-div").hide();
     })
-
+// Calls runProfile after deciding book.
     $("#book-save").on("click", function() {
         runProfile();
         $("#final-div").show();
@@ -116,7 +116,7 @@ $(document).ready(function () {
         $("#book-selector-div").show();
     })
 
-
+    // These buttons generate a new photo if user does not like choice
     $("#pic-reload").on("click", function () {
         getPic(catfishGender);
     })
@@ -134,19 +134,19 @@ $(document).ready(function () {
     })
 
     
-
+//  Book search button calls, findBook function
     $("#book-search").on("click", function () {
         var userBook = $("#book-input").val().trim();
         findBook(userBook);
         $("#book-input").val("");
 
     })
-
+// Refresh button
     $("#reload-button").on("click", function() {
         location.reload();
     })
 
-
+//  Determines which gender user chooses
     function whichGender() {
         if (maleCheck.checked == true) {
             catfishGender = "male";
@@ -157,7 +157,7 @@ $(document).ready(function () {
         };
 
     }
-
+// Api call to random user that displays a randomized photo
     function getPic(x) {
         $.ajax({
             url: 'https://randomuser.me/api/?gender=' + x,
@@ -176,7 +176,7 @@ $(document).ready(function () {
 
         });
     }
-
+// Api call to random cat photo generator
     function getPet() {
         petApi = "https://aws.random.cat/meow";
         $.getJSON(petApi, function (data) {
@@ -191,7 +191,7 @@ $(document).ready(function () {
 
         });
     };
-
+// Api call that recieves random info
     function getInfo(x) {
         $.ajax({
             url: 'https://randomuser.me/api/?gender=' + x,
@@ -223,7 +223,7 @@ $(document).ready(function () {
 
     }
 
-
+// Function that stores all data into final div
     function runProfile() {
 
         finalPic = $("#pic-result").html();
@@ -257,7 +257,7 @@ $(document).ready(function () {
         $("#final-book").html(finalBook);
 
     }
-
+// book pic selection
     $(document).on('click', '.book-pic-select' , function(event){
         event.preventDefault();
         userBookSelect = this.innerHTML;
@@ -272,7 +272,7 @@ $(document).ready(function () {
         $("#book-pic-div3").html(x);
 
     }
-
+// Api call to quote generator
     function generateQuote() {
         newQuoteApi = "https://quote-garden.herokuapp.com/quotes/random";
 
@@ -289,7 +289,7 @@ $(document).ready(function () {
    
 
   
-
+// Api call to random book
     function findBook(x) {
         newBookApi = "http://openlibrary.org/search.json?q=" + x;
 
