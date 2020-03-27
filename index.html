@@ -24,7 +24,7 @@
 
 <style>
     html {
-        background: url(assets/disco-background.png) no-repeat center center fixed;
+        background: url(assets/blue-gradient-background.png) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -36,7 +36,7 @@
 <body>
 
     <nav>
-        <div class="nav-wrapper green" id="navbar">
+        <div class="nav-wrapper deep-orange lighten-1" id="navbar">
             <a href="#" id="logo" class="brand-logo center">CatFish</a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
             </ul>
@@ -45,94 +45,94 @@
 
     <div class="container center-align">
 
-       
+
         <div class='bShadow-34' id="generate-profile-div">
-    
-    
-                <div class="col xl8 l8 m12 s12 center-align">
-                    <div>
-                        <h5 id="search-header">Generate Profile</h5>
-                        <button id="start-button">Start</button>
-                    </div>
+
+
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+                <div>
+                    <h5 id="search-header">Generate Profile</h5>
+                    <button id="start-button">Start</button>
                 </div>
-    
-         
-        
+            </div>
+
+
+
         </div>
 
         <div class='bShadow-34' id="gender-div">
 
-                <div class="col xl8 l8 m12 s12 center-align">
-                    <div>
-                        <h5 id="gender-header">Is this Catfish Male or Female?</h5>
-                        <form class="left-align" action="#">
-                            <p>
-                              <label>
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+                <div>
+                    <h5 id="gender-header">Is this Catfish Male or Female?</h5>
+                    <form class="left-align" action="#">
+                        <p>
+                            <label>
                                 <input type="checkbox" id="male-check" />
-                                <span>Male</span>
-                              </label>
-                            </p>
-                            <p>
-                              <label>
+                                <span style="color: black; margin-left: 5px;">Male</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
                                 <input type="checkbox" id="female-check" />
-                                <span>Female</span>
-                              </label>
-                            </p>  
-                            <p class="right-align">
-                                <button id="gender-save">Save</button>
-                            </p>    
-                          </form>
-                    </div>
+                                <span style="color: black; margin-left: 5px;">Female</span>
+                            </label>
+                        </p>
+                        <p class="right-align">
+                            <button id="gender-save">Save</button>
+                        </p>
+                    </form>
                 </div>
             </div>
-       
+        </div>
+
 
         <div class='bShadow-34' id="pic-selector-div">
-            <div class="col xl8 l8 m12 s12 center-align">
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
                 <div>
                     <h5 id="pet-header">Is this your Catfish's Face?</h5>
 
                     <div id="pic-result"></div>
-                    <div>
+                    <div style="margin: 5px;">
                         <button id="pic-reload">Nah, try again</button>
                         <button id="pic-save">Save</button>
                     </div>
-            </div> 
+                </div>
             </div>
         </div>
 
         <div class='bShadow-34' id="info-selector-div">
-            <div class="col xl8 l8 m12 s12 center-align">
-            
-                    <h5 id="info-header">Every good fish has a story. Set up your basic info!</h5>
-                    <div>
-                        <ul id="profile-ul">
-                            <li id="picture-li"></li>
-                            <h3 id="name-li"></h3>
-                            <li id="age-li"></li>
-                            <li id="gender-li"></li>
-                            <li id="location-li"></li>
-                            <li id="email-li"></li>
-                            <li id="username-li"></li>
-                            <li id="quote-li"></li>
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
 
-                            <li id="crazy-pic-li"></li>
-                        </ul>
-                        <button id="info-reload">Nah, try again</button>
-                        <button id="info-save">Save</button>
-                    </div>
+                <h5 id="info-header">Every good fish has a story. Set up your basic info!</h5>
+                <div>
+                    <ul id="profile-ul">
+                        <li id="picture-li"></li>
+                        <h3 id="name-li"></h3>
+                        <li id="age-li"></li>
+                        <li id="gender-li"></li>
+                        <li id="location-li"></li>
+                        <li id="email-li"></li>
+                        <li id="username-li"></li>
+                        <li id="quote-li"></li>
+
+                        <li id="crazy-pic-li"></li>
+                    </ul>
+                    <button id="info-reload">Nah, try again</button>
+                    <button id="info-save">Save</button>
+                </div>
             </div>
-       
+
         </div>
 
         <div class='bShadow-34' id="quote-selector-div">
-            <div class="col xl8 l8 m12 s12 center-align">
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
                 <div>
                     <h5 id="quote-header">You are an educated Catfish. Now pick a favorite quote:</h5>
                     <div id="quote-div">
 
                     </div>
-                    <div>
+                    <div style="margin: 10px;">
                         <button id="quote-reload">Nah, try again</button>
                         <button id="quote-save">Save</button>
                     </div>
@@ -140,57 +140,57 @@
             </div>
         </div>
 
-        <div class='bShadow-34'  id="pet-div">
-            <div class="col xl8 l8 m12 s12 center-align">
+        <div class='bShadow-34' id="pet-div">
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
                 <div>
                     <h5 id="pet-header">Does this Catfish have a Pet?</h5>
                     <form class="left-align" action="#">
                         <p>
-                          <label>
-                            <input type="checkbox" id="dog-check" />
-                            <span>Yes, a Dog!</span>
-                          </label>
+                            <label>
+                                <input type="checkbox" id="dog-check" />
+                                <span>Yes, a Dog!</span>
+                            </label>
                         </p>
                         <p>
-                          <label>
-                            <input type="checkbox" id="cat-check" />
-                            <span>Yes, a Cat!</span>
-                          </label>
-                        </p> 
+                            <label>
+                                <input type="checkbox" id="cat-check" />
+                                <span>Yes, a Cat!</span>
+                            </label>
+                        </p>
                         <p>
                             <label>
-                              <input type="checkbox" id="no-pet-check" />
-                              <span>No, I'm allergic!</span>
+                                <input type="checkbox" id="no-pet-check" />
+                                <span>No, I'm allergic!</span>
                             </label>
-                          </p>  
+                        </p>
                         <p class="right-align">
                             <button id="pet-save">Save</button>
-                        </p>    
-                      </form>
+                        </p>
+                    </form>
                 </div>
             </div>
 
         </div>
-         
+
         <div class='bShadow-34' id="cat-selector-div">
 
-            <div class="col xl8 l8 m12 s12 center-align">
-                
-                    <h5 id="cat-header">Is this your kitty?</h5>
-                    <div>
-                        <button id="cat-reload">Nah, try again</button>
-                        <button id="cat-save">Save</button>
-                    </div>
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+
+                <h5 id="cat-header">Is this your kitty?</h5>
+                <div style="margin: 10px;">
+                    <button id="cat-reload">Nah, try again</button>
+                    <button id="cat-save">Save</button>
+                </div>
             </div>
 
         </div>
 
         <div class='bShadow-34' id="dog-selector-div">
 
-            <div class="col xl8 l8 m12 s12 center-align">
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
                 <div>
                     <h5 id="dog-header">Is this your pup?</h5>
-                    <div>
+                    <div style="margin: 10px;">
                         <button id="dog-reload">Nah, try again</button>
                         <button id="dog-save">Save</button>
                     </div>
@@ -200,7 +200,7 @@
         </div>
 
         <div class='bShadow-34' id="profile-info-div">
-            <div class="col xl8 l8 m12 s12 center-align">
+            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
 
 
                 <div>
@@ -218,7 +218,7 @@
                             <li id="final-quote"></li>
                         </ul>
 
-                        <button id="go-back">Go Back</button>
+                        <button id="go-back">Reload</button>
 
                     </div>
 
@@ -227,7 +227,7 @@
 
         </div>
 
-   
+
 
     </div>
 
