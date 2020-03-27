@@ -10,9 +10,6 @@ $(document).ready(function () {
 
     var maleCheck = document.querySelector("#male-check");
     var femaleCheck = document.querySelector("#female-check");
-    var catCheck = document.querySelector("#cat-check");
-    var dogCheck = document.querySelector("#dog-check");
-    var noPetCheck = document.querySelector("#no-pet-check");
     var catfishGender;
 
 
@@ -23,6 +20,9 @@ $(document).ready(function () {
     $("#quote-selector-div").hide();
     $("#profile-info-div").hide();
     $("#cat-selector-div").hide();
+    $("#book-selector-div").hide();
+    $("#book-selected-div").hide();
+   
 
 
     $("#start-button").on("click", function () {
@@ -88,16 +88,15 @@ $(document).ready(function () {
 
 
     $("#cat-save").on("click", function () {
-        $("#gender-div").hide();
-        $("#pic-selector-div").hide();
-        $("#info-selector-div").hide();
-        $("#quote-selector-div").hide();
-        $("#profile-info-div").show();
-        $("#dog-selector-div").hide();
+        $("#book-selector-div").show();
         $("#cat-selector-div").hide();
-        $("#pet-div").hide();
-        $("#generate-profile-div").hide();
+        $("#final-div").hide();
+    })
+
+    $("#book-save").on("click", function() {
         runProfile();
+        $("#final-div").show();
+        $("#book-selected-div").hide();
     })
 
     $("#go-back").on("click", function () {
@@ -110,6 +109,11 @@ $(document).ready(function () {
         $("#cat-selector-div").hide();
         $("#pet-div").hide();
         $("#generate-profile-div").show();
+    })
+
+    $("#book-back").on("click", function() {
+        $("#book-selected-div").hide();
+        $("#book-selector-div").show();
     })
 
 
@@ -129,8 +133,17 @@ $(document).ready(function () {
         getPet();
     })
 
-    $("#cat-save").on("click", function () {
-        $("#final-div").show();
+    
+
+    $("#book-search").on("click", function () {
+        var userBook = $("#book-input").val().trim();
+        findBook(userBook);
+        $("#book-input").val("");
+
+    })
+
+    $("#reload-button").on("click", function() {
+        location.reload();
     })
 
 
@@ -225,6 +238,9 @@ $(document).ready(function () {
         finalGender = $("#gender-li").text();
         $("#final-gender").html(finalGender);
 
+        finalLocation = $("#location-li").text();
+        $("#final-location").html(finalLocation);
+
         finalEmail = $("#email-li").text();
         $("#final-email").text(finalEmail);
 
@@ -237,23 +253,23 @@ $(document).ready(function () {
         finalCat = $("#cat-pic-div").html();
         $("#final-cat").html(finalCat);
 
+        finalBook = $("#book-pic-div3").html();
+        $("#final-book").html(finalBook);
 
+    }
 
+    $(document).on('click', '.book-pic-select' , function(event){
+        event.preventDefault();
+        userBookSelect = this.innerHTML;
+       userSelectsBook(userBookSelect);
+       $("#book-selector-div").hide();
+       $("#book-selected-div").show();
+       
+    })
 
-
-
-
-
-
-
-        // <h3 id="name"></h3>
-        // <li id="age"></li>
-        // <li id="gender"></li>
-        // <li id="location"></li>
-        // <li id="email"></li>
-        // <li id="username"></li>
-        // <li id="quote"></li>
-
+    function userSelectsBook(x) {
+        console.log(x);
+        $("#book-pic-div3").html(x);
 
     }
 
@@ -267,6 +283,40 @@ $(document).ready(function () {
 
             $("#quote-div").text('"' + quote + '"' + " -" + author);
 
+        });
+    }
+
+   
+
+  
+
+    function findBook(x) {
+        newBookApi = "http://openlibrary.org/search.json?q=" + x;
+
+        $.getJSON(newBookApi, function (data) {
+            console.log(data);
+         
+
+            var bookCover2 = $("<img>").attr("src", imgUrl2);
+            $("#book-pic-div2").html($(bookCover2).attr("class", "cat-pic"));
+            $("#book-pic-div2").html("");
+            for (i=0; i <= 4; i++) {
+
+                var olid = data.docs[i].cover_edition_key;
+
+                if (olid === undefined) {
+                    $("#book-pic-div2").append("");
+                }
+                else {
+                var imgUrl2 = 'https://covers.openlibrary.org/b/olid/' + olid + '-L.jpg'; 
+                console.log(imgUrl2);
+                console.log(olid);
+             
+               
+                $("#book-pic-div2").append('<a class="book-pic-select"><img class="book-pic-select" src=' + imgUrl2 + '></img></a>');
+                }
+            }
+     
         });
     }
 
