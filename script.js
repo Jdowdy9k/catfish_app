@@ -148,7 +148,7 @@ function getPic(x) {
               src: picture, 
               width: 200
             });
-            $("#pic-result").html(img);
+            $("#pic-result").html(img).attr("class", "final-pic");
           
         }
     
@@ -227,24 +227,6 @@ function runProfile() {
 
         finalCat = $("#cat-pic-div").html();
         $("#final-cat").html(finalCat);
-
-
-        
-
-
-
-
-
-
-
-        // <h3 id="name"></h3>
-        // <li id="age"></li>
-        // <li id="gender"></li>
-        // <li id="location"></li>
-        // <li id="email"></li>
-        // <li id="username"></li>
-        // <li id="quote"></li>
-   
 
     }
 

@@ -20,6 +20,10 @@ button {
     width: 200px;
 }
 
+.final-pic {
+    border-radius: 100%;
+}
+
 #pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div {
     width: 100%;
 }
