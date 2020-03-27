@@ -1,8 +1,14 @@
 button {
     font-weight: bolder;
+<<<<<<< HEAD
     color: rgba(248, 122, 248, 0.89);
     background-color: rgb(19, 80, 246);
     border: 1px solid rgba(248, 9, 248, 0.89);
+=======
+    color: rgb(255	202	40);
+    background-color: rgb(19, 80, 246);
+    border: 1px solid rgb(255	202	40);
+>>>>>>> 97f0ff52f36b990efe0bf27db2a676f8119ad429
     border-radius: 10px;
     padding: 15px;
     cursor: pointer;
@@ -12,7 +18,11 @@ button {
     transition: all 0.2s ease-in-out;
     }
     button:hover {
+<<<<<<< HEAD
     box-shadow: 1px 1px  rgba(248, 9, 248, 0.89), 2px 2px  rgba(248, 9, 248, 0.89), 3px 3px  rgba(248, 9, 248, 0.89);
+=======
+    box-shadow: 1px 1px  rgb(255	202	40), 2px 2px rgb(255	202	40), 3px 3px  rgb(255	202	40);
+>>>>>>> 97f0ff52f36b990efe0bf27db2a676f8119ad429
     transform: translateX(-3px);
     }
 
@@ -20,6 +30,7 @@ button {
     width: 200px;
     margin: 15px;
     
+<<<<<<< HEAD
 }
 
 .book-pic-select {
@@ -37,6 +48,25 @@ a:hover {
 #pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div, #generate-profile-div, #gender-div, #book-selector-div, #book-selected-div {
     width: 100%;
     margin: 35px;
+=======
+}
+
+.book-pic-select {
+    width: 180px;
+    margin: 15px;
+
+}
+
+
+
+a:hover {
+    opacity: 60%;
+}
+
+#pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div, #generate-profile-div, #gender-div, #book-selector-div, #book-selected-div, #quote-selector-div {
+    width: 100%;
+    margin-top: 80px;
+>>>>>>> 97f0ff52f36b990efe0bf27db2a676f8119ad429
     border-radius: 35px;
     background: lightsteelblue;
     padding: 20px;
@@ -57,19 +87,19 @@ a:hover {
 
 
 .brand-logo {
-    animation: color-change 2.5s infinite, 3s slide-right;
-    font-family: 'Bubblegum Sans', cursive;
+    animation: color-change 14s infinite, 3s slide-right;
+    font-family: 'Titan One', cursive;
     font-size: 60px !important;
     overflow: hidden;
     }
 
 @keyframes color-change {
-    0% { color: red; }
-    20% { color: yellow }
-    40% { color: purple}
-    60% { color: blue; }
-    80% { color: lightgreen}
-    100% { color: pink; }
+    0% { color: rgb(6, 3, 199); }
+    20% { color: rgb(184, 0, 184) }
+    40% { color: rgb(116, 1, 116)}
+    60% { color: rgb(184, 0, 184); }
+    80% { color: rgb(6, 3, 199)}
+    100% { color: rgb(32, 0, 173); }
 }
 
 @keyframes slide-right {
