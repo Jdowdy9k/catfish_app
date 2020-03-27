@@ -1,14 +1,8 @@
 button {
     font-weight: bolder;
-<<<<<<< HEAD
-    color: rgba(248, 122, 248, 0.89);
-    background-color: rgb(19, 80, 246);
-    border: 1px solid rgba(248, 9, 248, 0.89);
-=======
     color: rgb(255	202	40);
     background-color: rgb(19, 80, 246);
     border: 1px solid rgb(255	202	40);
->>>>>>> 97f0ff52f36b990efe0bf27db2a676f8119ad429
     border-radius: 10px;
     padding: 15px;
     cursor: pointer;
@@ -18,11 +12,7 @@ button {
     transition: all 0.2s ease-in-out;
     }
     button:hover {
-<<<<<<< HEAD
-    box-shadow: 1px 1px  rgba(248, 9, 248, 0.89), 2px 2px  rgba(248, 9, 248, 0.89), 3px 3px  rgba(248, 9, 248, 0.89);
-=======
     box-shadow: 1px 1px  rgb(255	202	40), 2px 2px rgb(255	202	40), 3px 3px  rgb(255	202	40);
->>>>>>> 97f0ff52f36b990efe0bf27db2a676f8119ad429
     transform: translateX(-3px);
     }
 
@@ -30,25 +20,6 @@ button {
     width: 200px;
     margin: 15px;
     
-<<<<<<< HEAD
-}
-
-.book-pic-select {
-    width: 180px;
-    margin: 15px;
-
-}
-
-
-
-a:hover {
-    opacity: 60%;
-}
-
-#pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div, #generate-profile-div, #gender-div, #book-selector-div, #book-selected-div {
-    width: 100%;
-    margin: 35px;
-=======
 }
 
 .book-pic-select {
@@ -65,11 +36,11 @@ a:hover {
 
 #pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div, #generate-profile-div, #gender-div, #book-selector-div, #book-selected-div, #quote-selector-div {
     width: 100%;
-    margin-top: 80px;
->>>>>>> 97f0ff52f36b990efe0bf27db2a676f8119ad429
+    margin: 35px;
     border-radius: 35px;
     background: lightsteelblue;
     padding: 20px;
+    font-family: 'Fredoka One', cursive;
 }
 
 .bShadow-34,.bShadow-34h:hover{
@@ -83,6 +54,8 @@ a:hover {
     border-radius: 35px;
     background: lightsteelblue;
     padding: 20px;
+    font-size: 20px;
+    font-family: 'Viga', sans-serif;
 }    
 
 
