@@ -60,7 +60,7 @@
     </div>
     <!--Nav Logo-->
     <nav>
-        <div class="nav-wrapper deep-orange lighten-1 modal-trigger" href="#modal1" id="navbar">
+        <div class="nav-wrapper modal-trigger" href="#modal1" id="navbar">
             <a href="#" id="logo" class="brand-logo center">CatFish'd</a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
             </ul>
@@ -69,27 +69,28 @@
 
     <div class="container center-align">
 
+        
 
-        <div class='bShadow-34' id="generate-profile-div">
+
+        <div class='bShadow-34 col xl8 l8 m12 s12' id="generate-profile-div">
 
             <!--Generate Profile Div-->
-            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+            <div>
                 <div>
-                    <h5 id="search-header">Generate Profile</h5>
-                    <button id="start-button">Start</button>
+                  
+                    <button id="start-button">Generate Profile</button>
                 </div>
             </div>
 
-
-
         </div>
         <!--Gender Profile Div-->
-        <div class='bShadow-34' id="gender-div">
+        <div class='bShadow-34 col xl8 l8 m12 s12' id="gender-div">
 
-            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+            <div class="row center-align inner-div brown lighten-4" style="padding: 10px; margin-top: 10px;">
                 <div>
-                    <h5 id="gender-header">Is this Catfish Male or Female?</h5>
-                    <form class="left-align" action="#">
+                    <h4 id="gender-header">Is this Catfish Male or Female?</h4>
+                    <div class="col xl2 l2 m0 s0" ></div>
+                    <form class="left-align col xl8 l8 m12 s12" style="margin-top: 40px;" action="#">
                         <p>
                             <label>
                                 <input type="checkbox" id="male-check" />
@@ -111,10 +112,10 @@
         </div>
 
         <!--Random Photo Div-->
-        <div class='bShadow-34' id="pic-selector-div">
-            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+        <div class='bShadow-34 col xl8 l8 m12 s12' id="pic-selector-div">
+            <div class="center-align inner-div brown lighten-4" style="padding: 10px; margin-top: 10px;">
                 <div>
-                    <h5 id="pet-header">Is this your Catfish's Face?</h5>
+                    <h4 id="pet-header">Is this your Catfish's Face?</h4>
 
                     <div id="pic-result"></div>
                     <div style="margin: 5px;">
@@ -125,10 +126,10 @@
             </div>
         </div>
         <!--Info Div -->
-        <div class='bShadow-34' id="info-selector-div">
-            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+        <div class='bShadow-34 col xl8 l8 m12 s12' id="info-selector-div">
+            <div class="center-align inner-div brown lighten-4" style="padding: 10px; margin-top: 10px;">
 
-                <h5 id="info-header">Every good fish has a story. Set up your basic info!</h5>
+                <h4 id="info-header">Every good fish has a story. Set up your basic info!</h4>
                 <div>
                     <ul id="profile-ul">
                         <li id="picture-li"></li>
@@ -139,8 +140,6 @@
                         <li id="email-li"></li>
                         <li id="username-li"></li>
                         <li id="quote-li"></li>
-
-                        <li id="crazy-pic-li"></li>
                     </ul>
                     <button id="info-reload" style="margin-bottom: 20px;">Nah, try again</button>
                     <button id="info-save" style="margin-bottom: 20px;">Save</button>
@@ -149,14 +148,14 @@
 
         </div>
         <!--Quote Selection Div -->
-        <div class='bShadow-34' id="quote-selector-div">
-            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+        <div class='bShadow-34 col xl8 l8 m12 s12' id="quote-selector-div">
+            <div class="center-align inner-div brown lighten-4" style="padding: 10px; margin-top: 10px;">
                 <div>
-                    <h5 id="quote-header">You are an educated Catfish. Now pick a favorite quote:</h5>
+                    <h4 id="quote-header">You are an educated Catfish. Now pick a favorite quote:</h4>
                     <div id="quote-div">
 
                     </div>
-                    <div style="">
+                    <div>
                         <button id="quote-reload" style="margin-bottom: 20px;">Nah, try again</button>
                         <button id="quote-save" style="margin-bottom: 20px;">Save</button>
                     </div>
@@ -164,11 +163,11 @@
             </div>
         </div>
         <!--Cat photo selection Div -->
-        <div class='bShadow-34' id="cat-selector-div">
+        <div class='bShadow-34 col xl8 l8 m12 s12' id="cat-selector-div">
 
-            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+            <div class="center-align inner-div brown lighten-4" style="padding: 10px; margin-top: 10px;">
 
-                <h5 id="cat-header">Is this your kitty?</h5>
+                <h4 id="cat-header">Is this your kitty?</h4>
                 <div id="cat-pic-div"></div>
                 <div style="margin: 10px;">
                     <button id="cat-reload">Nah, try again</button>
@@ -178,11 +177,11 @@
 
         </div>
         <!--Book selection Div-->
-        <div class='bShadow-34' id="book-selector-div">
+        <div class='bShadow-34 col xl8 l8 m12 s12' id="book-selector-div">
 
-            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+            <div class="center-align inner-div brown lighten-4" style="padding: 10px; margin-top: 10px;">
 
-                <h5 id="cat-header">Pick a Favorite Book</h5>
+                <h4 id="cat-header">Pick a Favorite Book</h4>
 
                 <div class="input-field" style="margin: 10px;">
 
@@ -198,11 +197,11 @@
 
         </div>
 
-        <div class='bShadow-34' id="book-selected-div">
+        <div class='bShadow-34 col xl8 l8 m12 s12' id="book-selected-div">
 
-            <div class="col xl8 l8 m12 s12 center-align brown lighten-4" style="padding: 10px; margin-top: 10px;">
+            <div class="center-align inner-div brown lighten-4" style="padding: 10px; margin-top: 10px;">
 
-                <h5 id="cat-header">Pick a Favorite Book</h5>
+                <h4 id="cat-header">Pick a Favorite Book</h4>
                 <div id="book-pic-div3"></div>
                 <div style="margin: 10px;">
                     <button id="book-back">Back</button>
@@ -212,12 +211,13 @@
 
         </div>
         <!--Div that shows final results-->
-        <div class='bShadow-34' id="final-div">
+        <div class='bShadow-34 col xl8 l8 m12 s12' id="final-div">
 
-            <div class="col xl8 l8 m12 s12 center-align" style="padding: 10px; margin-top: 10px;">
+            <div class="center-align" style="padding: 10px; margin-top: 10px;">
 
-                <h5 id="cat-header" style="font-family: 'Fredoka One', cursive;">This Catfish is Served</h5>
+                
                 <ul id="profile-ul">
+                    <li><h4 id="cat-header" style="font-family: 'Fredoka One', cursive;">This Catfish is Served!</h4></li>
                     <li id="final-picture"></li>
                     <h3 id="final-name"></h3>
                     <li id="final-age"></li>
@@ -225,10 +225,11 @@
                     <li id="final-location"></li>
                     <li id="final-email"></li>
                     <li id="final-username"></li>
+                    <li class="final-headers">My favorite quote:</li>
                     <li id="final-quote"></li>
-                    <li id="final-cat-header">My kitty:</li>
+                    <li class="final-headers">My kitty:</li>
                     <li id="final-cat"></li>
-                    <li id="final-book-header">My favorite book:</li>
+                    <li class="final-headers">My favorite book:</li>
                     <li id="final-book"></li>
                     <div style="margin: 10px;">
                         <button id="reload-button">Reload</button>
@@ -248,3 +249,4 @@
 </body>
 
 </html>
+

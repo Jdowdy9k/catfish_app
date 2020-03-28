@@ -2,7 +2,7 @@ button {
     font-weight: bolder;
     color: rgb(255	202	40);
     background-color: rgb(19, 80, 246);
-    border: 1px solid rgb(255	202	40);
+    border: 1px solid rgb(255, 202,	40);
     border-radius: 10px;
     padding: 15px;
     cursor: pointer;
@@ -16,10 +16,53 @@ button {
     transform: translateX(-3px);
     }
 
+h4 {
+    margin: 20px;
+}
+
+.checkbox-text {
+    font-size: 40px;
+}
+
+#navbar {
+    background-color: rgb(255, 202,	40) !important;
+}
+
+button:focus {
+    background-color: rgb(42, 140, 231) !important;
+}
+
+input:focus {
+    border-color: rgb(42, 140, 231) !important;
+}
+
+
+.final-headers {
+    color: rgb(19, 80, 246);
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+#quote-div {
+    font-size: 25px;
+    color: rgb(19, 80, 246);
+    line-height: 30px;
+    margin: 50px;
+}
+
+.inner-div {
+    border-radius: 35px;
+}
+
 .cat-pic {
     width: 200px;
     margin: 15px;
     
+}
+
+.profile-pic {
+    border-radius: 100%;
+    margin: 15px;
 }
 
 .book-pic-select {
@@ -28,6 +71,10 @@ button {
 
 }
 
+#final-div {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
 
 
 a:hover {
@@ -35,11 +82,12 @@ a:hover {
 }
 
 #pic-selector-div, #info-selector-div, #cat-selector-div, #dog-selector-div, #generate-profile-div, #gender-div, #book-selector-div, #book-selected-div, #quote-selector-div {
-    width: 100%;
-    margin: 35px;
+   
+    margin-top: 50px;
     border-radius: 35px;
     background: lightsteelblue;
     padding: 20px;
+    margin-bottom: 80px;
     font-family: 'Fredoka One', cursive;
 }
 
@@ -59,6 +107,7 @@ a:hover {
 }    
 
 
+
 .brand-logo {
     animation: color-change 14s infinite, 3s slide-right;
     font-family: 'Titan One', cursive;
@@ -74,6 +123,8 @@ a:hover {
     80% { color: rgb(6, 3, 199)}
     100% { color: rgb(32, 0, 173); }
 }
+
+
 
 @keyframes slide-right {
     from {
@@ -102,3 +153,4 @@ a:hover {
 .fade-in-bottom-right{
     animation-name: fade-in-bottom-right;
 }
+
