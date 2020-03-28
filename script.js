@@ -169,7 +169,7 @@ $(document).ready(function () {
                         src: picture,
                         width: 200
                     });
-                $("#pic-result").html(img);
+                $("#pic-result").html($(img).attr("class", "profile-pic"));
 
             }
 
@@ -294,9 +294,12 @@ $(document).ready(function () {
             console.log(data);
             var quote = data.quoteText;
             var author = data.quoteAuthor;
-
+            if (author === "") {
+                $("#quote-div").text('"' + quote + '"');
+            }
+            else {
             $("#quote-div").text('"' + quote + '"' + " -" + author);
-
+            }
         });
     }
 
@@ -335,3 +338,4 @@ $(document).ready(function () {
 
 
 });
+
