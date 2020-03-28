@@ -36,6 +36,8 @@
 
 <body>
 
+  
+
     <!-- Modal Structure -->
     <div id="modal1" class="modal">
         <div class="modal-content">
@@ -56,6 +58,15 @@
         </div>
         <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <h1>Sorry, couldn't find that book. :(</h1>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
         </div>
     </div>
     <!--Nav Logo-->
@@ -159,6 +170,8 @@
                         <button id="quote-reload" style="margin-bottom: 20px;">Nah, try again</button>
                         <button id="quote-save" style="margin-bottom: 20px;">Save</button>
                     </div>
+
+                    
                 </div>
             </div>
         </div>
@@ -192,7 +205,22 @@
 
                 </div>
 
+                <div id="book-pic-div1"><div class="center-align preloader-wrapper big active">
+                    <div class="spinner-layer spinner-blue-only">
+                      <div class="circle-clipper left">
+                        <div class="circle"></div>
+                      </div><div class="gap-patch">
+                        <div class="circle"></div>
+                      </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                      </div>
+                    </div>
+            </div>
+            </div>
+            <div>
+            
                 <div id="book-pic-div2"></div>
+            </div>
             </div>
 
         </div>
@@ -203,6 +231,7 @@
 
                 <h4 id="cat-header">Pick a Favorite Book</h4>
                 <div id="book-pic-div3"></div>
+        
                 <div style="margin: 10px;">
                     <button id="book-back">Back</button>
                     <button id="book-save">Save</button>

@@ -1,5 +1,7 @@
 $(document).ready(function () {
-    var elems = $('.modal');
+    var elems = $('#modal1');
+    var instances = M.Modal.init(elems);
+    var elems = $('#modal1');
     var instances = M.Modal.init(elems);
 
     $("modal-trigger").on("click", function() {
@@ -21,6 +23,7 @@ $(document).ready(function () {
     $("#cat-selector-div").hide();
     $("#book-selector-div").hide();
     $("#book-selected-div").hide();
+    $("#book-pic-div1").hide();
    
 
 
@@ -125,6 +128,7 @@ $(document).ready(function () {
     })
 
     $("#quote-reload").on("click", function () {
+        
         generateQuote();
     })
 
@@ -135,6 +139,7 @@ $(document).ready(function () {
     
 
     $("#book-search").on("click", function () {
+        $("#book-pic-div1").show();
         var userBook = $("#book-input").val().trim();
         findBook(userBook);
         $("#book-input").val("");
@@ -288,12 +293,16 @@ $(document).ready(function () {
     }
 // Api call to quote generator
     function generateQuote() {
+
+        
         newQuoteApi = "https://quote-garden.herokuapp.com/quotes/random";
 
         $.getJSON(newQuoteApi, function (data) {
             console.log(data);
             var quote = data.quoteText;
             var author = data.quoteAuthor;
+            
+            
             if (author === "") {
                 $("#quote-div").text('"' + quote + '"');
             }
@@ -303,6 +312,7 @@ $(document).ready(function () {
         });
     }
 
+    
    
 
   
@@ -311,12 +321,26 @@ $(document).ready(function () {
 
         $.getJSON(newBookApi, function (data) {
             console.log(data);
+
+           
          
 
             var bookCover2 = $("<img>").attr("src", imgUrl2);
             $("#book-pic-div2").html($(bookCover2).attr("class", "cat-pic"));
             $("#book-pic-div2").html("");
+
+            if (data == undefined || data.docs[0] == undefined) {
+            
+                $("#book-pic-div1").hide();
+                alert("sorry, can't find this book");
+                return;
+
+            }
+            
             for (i=0; i <= 4; i++) {
+                
+
+                console.log("data.docs[i]=" + data.docs[i]);
 
                 var olid = data.docs[i].cover_edition_key;
 
@@ -328,12 +352,18 @@ $(document).ready(function () {
                 console.log(imgUrl2);
                 console.log(olid);
              
-               
+                $("#book-pic-div1").hide();
                 $("#book-pic-div2").append('<a class="book-pic-select"><img class="book-pic-select" src=' + imgUrl2 + '></img></a>');
                 }
             }
-     
+          
+
         });
+            
+     
+      
+
+        
     }
 
 
